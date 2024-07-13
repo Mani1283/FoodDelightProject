@@ -1,0 +1,25 @@
+<div class="mainContainer">
+    <div class="p-grid" style=" box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 1.16);">
+        <div class="p-col-12">
+            <div class="p-grid p-align-stretch card-container">
+                <div class="card" *ngFor="let restaurant of restaurants" class="p-col-12 p-md-6 p-lg-4">
+                    <p-card [header]="restaurant.name" class="config-card">
+                        <div class="card-header">
+                            {{ restaurant.name }}
+                        </div>
+                        <div class="card-content">
+                            <p>{{ restaurant.description }}</p>
+                            <p>{{ restaurant.location }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" style="width: 50%;" label="Secondary" class="button" pButton  icon="pi pi-check" label="Edit" (click)="editRestaurant(restaurant.id)"></button>
+                            <button type="button" style="width: 50%;"  label="Secondary" class="button" pButton label="Delete" (click)="deleteRestaurant(restaurant.id)"></button>
+                          </div>
+                    </p-card>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="  display: flex;
+  justify-content: flex-end;"><p-button (onClick)="addPage()">Create Restaurant</p-button></div>
+</div>

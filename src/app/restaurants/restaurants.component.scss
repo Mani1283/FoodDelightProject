@@ -1,0 +1,42 @@
+
+.mainContainer{
+    display: grid;
+    padding: 5px;
+    gap: 8px;
+    overflow: hidden;
+}
+.card-container {
+    overflow: auto;
+    display: flex;
+    height: calc(100vh - 80px);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .card {
+    width: calc(33.33% - 20px);
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-content {
+    font-size: 14px;
+  }
+  :host ::ng-deep .p-card .p-card-body{
+    width: 400px;
+    height: 230px;
+  }
+  .card-footer{
+    display: flex;
+    gap: 10px;
+  }
+  

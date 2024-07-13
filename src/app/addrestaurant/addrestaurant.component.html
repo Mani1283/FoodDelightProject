@@ -1,0 +1,29 @@
+<div class="mainContainer">
+    <div class="subContainer">
+        <div style="color: #8626c4;height: 10%;">
+            <h1>ADD RESTAURANT</h1>
+        </div>
+        <div>
+            <form [formGroup]="restaurantForm" class="formClass">
+                <div class="p-fluid labelsparent">
+                    <div class="p-field labelsinput">
+                        <label for="name" class="labelText">Name<span style="color:red">*</span></label><br>
+                        <input id="name" type="text" pInputText formControlName="name" required>
+                    </div>
+                    <div class="p-field labelsinput">
+                        <label for="description" class="labelText">Description<span style="color:red">*</span></label><br>
+                        <input id="description" type="text" pInputText formControlName="description">
+                    </div>
+                    <div class="p-field labelsinput">
+                        <label for="location" class="labelText">Location<span style="color:red">*</span></label><br>
+                        <input id="location" type="text" pInputText formControlName="location">
+                    </div>
+                </div>
+                <div class="footer">
+                    <button type="button" label="Secondary" class="button" pButton label="Cancel" (click)="cancel()"></button>
+                    <button type="submit" pButton label="Save" (click)="save()"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
